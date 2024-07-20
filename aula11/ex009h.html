@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Viagens</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Qual o seu país de origem? <input type="text" name="txt" id="txt">
+    <input type="button" value="Confirma" onclick="confirma()">
+    <div id="resposta">
+
+    </div>
+
+    <script>
+        function confirma() {
+            let txtOrigem = document.getElementById("txt").value;
+            let txtOrigemMaiusculo = txtOrigem.charAt(0).toUpperCase()
+            + txtOrigem.slice(1);
+            let resposta = document.getElementById("resposta");
+            
+            resposta.innerHTML = `<p>Seu país de origem é no(a) <strong>${txtOrigemMaiusculo}</strong></p>`;
+            if(txtOrigemMaiusculo == "Brasil") {
+                resposta.innerHTML += "<p>Você é Brasileiro!</p>";
+            } else {
+                resposta.innerHTML += "<p>Você é estrangeiro!</p>";
+            }
+        }
+
+    </script>
+</body>
+</html>
