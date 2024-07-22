@@ -3,12 +3,12 @@
 //while
 let c = 1
 while(c <= 6) {
-    console.log(`Passp ${c}`);
+    console.log(`Passo ${c}`);
     c++;
 }
 
 //do while
 do {
-    console.log(`Passp ${c}`);
+    console.log(`Passo ${c}`);
     c++;
 } while(c <= 6)
