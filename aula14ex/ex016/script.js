@@ -12,8 +12,18 @@ function contar() {
         let fi = Number(fim.value);
         let pas = Number(passo.value);
 
-        for(let c = ini; c <= fi; c += pas) {
-            res.innerHTML += `${c} \u{27A1} `;
-        }  
+        if(pas > 0 && fi > ini) {
+            for(let c = ini; c <= fi; c += pas) {
+                res.innerHTML += `${c} \u{27A1} `;
+            }
+            res.innerHTML += ` \u{1F3C1}`
+        } else if(pas > 0 && fi < ini) {
+            for(let c = ini; c >= fi; c -= pas) {
+                res.innerHTML += `${c} \u{27A1} `;
+            }
+            res.innerHTML += ` \u{1F3C1}`
+        } else {
+            alert("ERRO: Valor de passo inválido!");
+        }
     }
 }
