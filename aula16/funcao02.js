@@ -7,6 +7,8 @@ console.log(res);
 
 //é possível atribuir valor no parâmetro desse exemplo para evitar o NaN.
 
-/* function soma(n1=0, n2=0) {
+/*
+function soma(n1=0, n2=0) {
     return n1 + n2;
-} */
+}
+*/
